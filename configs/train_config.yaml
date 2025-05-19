@@ -1,0 +1,26 @@
+# トレーニング設定
+paths:
+  data_dir: 'data'
+  models_dir: 'models'
+
+jquants:
+  # 以下の認証情報は環境変数または.envファイルから読み込むことを推奨
+  mail_address: null  # 環境変数から読み込みます
+  password: null      # 環境変数から読み込みます
+  refresh_token: null # 環境変数から読み込みます
+
+data:
+  historical_years: 5  # 取得する履歴データの年数
+  test_years: 2        # テストデータとして使用する年数（末尾から）
+
+model:
+  seq_length: 20       # 入力シーケンスの長さ
+  num_heads: 4         # マルチヘッドアテンションのヘッド数
+  num_transformers: 3  # MultiTransformerのトランスフォーマー数
+  dropout_rate: 0.1    # ドロップアウト率
+
+training:
+  epochs: 100         # 最大エポック数
+  batch_size: 32      # バッチサイズ
+  patience: 10        # 早期停止の忍耐値
+  learning_rate: 0.001 # 学習率

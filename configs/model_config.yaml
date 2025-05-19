@@ -1,0 +1,11 @@
+# モデル設定
+model:
+  name: "multitransformer"
+  seq_length: 20
+  num_features: 20  # 特徴量の数（実際のデータによって変わる）
+  num_heads: 4
+  num_transformers: 3
+  dropout_rate: 0.1
+  d_model: 20  # 特徴量の数と同じ
+  ff_dim: 80   # d_modelの4倍
+  prediction_type: "volatility"  # "volatility" または "intraday_return"

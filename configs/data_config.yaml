@@ -1,0 +1,38 @@
+# データ設定
+data:
+  # J-Quants API設定
+  jquants:
+    use_refresh_token: true
+    # 以下は環境変数から設定します
+  
+  # データ取得設定
+  historical_years: 5
+  test_years: 2
+  
+  # TOPIX500銘柄を使用
+  use_topix500: true
+  
+  # 特徴量設定
+  features:
+    log_return:
+      use: true
+      lags: 10
+    
+    volatility:
+      use: true
+      window: 5
+      lags: 10
+    
+    volume:
+      use: false
+      lags: 0
+      
+  # 目的変数設定
+  target:
+    volatility:
+      use: true
+      window: 5
+      forward: 5
+    
+    intraday_return:
+      use: false
